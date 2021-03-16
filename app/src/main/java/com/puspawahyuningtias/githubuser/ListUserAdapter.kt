@@ -5,6 +5,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
@@ -31,13 +32,13 @@ class ListUserAdapter (private val listUsers: ArrayList<User>, private val conte
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-//        val user = listUsers[position]
+        val user = listUsers[position]
         holder.bind(listUsers[position])
-//        holder.itemView.setOnClickListener {
-//            val moveWithObjectIntent = Intent(context, DetailActivity::class.java)
-//            moveWithObjectIntent.putExtra(DetailActivity.EXTRA_MYDATA, myData)
-//            context.startActivity(moveWithObjectIntent)
-//        }
+        holder.itemView.setOnClickListener {
+            val moveWithObjectIntent = Intent(context, DetailActivity::class.java)
+            moveWithObjectIntent.putExtra(DetailActivity.EXTRA_MYDATA, user)
+            context.startActivity(moveWithObjectIntent)
+        }
     }
 
     override fun getItemCount(): Int = listUsers.size
