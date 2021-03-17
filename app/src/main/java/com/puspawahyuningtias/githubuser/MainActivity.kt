@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity() {
         val dataRepository = resources.getStringArray(R.array.repository)
         val dataLocation = resources.getStringArray(R.array.location)
         val dataCompany = resources.getStringArray(R.array.company)
-        dataPhoto.recycle()
         val listMyData = ArrayList<User>()
         for (position in dataUserName.indices) {
             val myData = User(
@@ -42,6 +41,7 @@ class MainActivity : AppCompatActivity() {
             )
             listMyData.add(myData)
         }
+        dataPhoto.recycle()
         return listMyData
     }
 
