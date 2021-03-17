@@ -2,7 +2,7 @@
     <string name="app_name">Github User</string>
     <string name="username">Username</string>
     <string name="nama">Nama</string>
-    <string name="followers">Followers</string>
+    <string name="follower">Follower</string>
     <string name="following">Following</string>
     <string name="repository">Repository</string>
     <string name="Jumlah">0</string>

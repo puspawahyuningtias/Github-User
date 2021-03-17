@@ -2,13 +2,12 @@ package com.puspawahyuningtias.githubuser
 
 import android.annotation.SuppressLint
 import android.app.Activity
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Parcelable
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import kotlinx.android.synthetic.main.activity_detail.*
-import kotlinx.android.synthetic.main.item_user.*
 import kotlinx.android.synthetic.main.item_user.img_avatar
 import kotlinx.android.synthetic.main.item_user.tv_nama
 
