@@ -1,6 +1,5 @@
 package com.puspawahyuningtias.githubuser
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.os.Bundle
 import android.os.Parcelable
@@ -20,7 +19,6 @@ class DetailActivity : AppCompatActivity() {
         intent.getParcelableExtra<T>(key)
     }
 
-    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)

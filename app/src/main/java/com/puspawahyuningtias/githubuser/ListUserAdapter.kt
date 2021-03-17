@@ -15,7 +15,7 @@ class ListUserAdapter(private val listUsers: ArrayList<User>, private val contex
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(user: User) {
             with(itemView) {
-                Glide.with(itemView.context)
+                Glide.with(context)
                     .load(user.photo)
                     .apply(RequestOptions().override(55, 55))
                     .into(img_avatar)
