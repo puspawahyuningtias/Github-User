@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         list.addAll(getListUsers())
         showRecyclerList()
     }
+
     @SuppressLint("ResourceType", "Recycle")
     fun getListUsers(): ArrayList<User> {
         val dataUserName = resources.getStringArray(R.array.username)
@@ -42,6 +43,7 @@ class MainActivity : AppCompatActivity() {
         }
         return listMyData
     }
+
     private fun showRecyclerList() {
         rv_user.layoutManager = LinearLayoutManager(this)
         val listMyDataAdapter = ListUserAdapter(list, this@MainActivity)

@@ -22,6 +22,7 @@ class SplashScreen : AppCompatActivity() {
         }
         timerThread.start()
     }
+
     override fun onPause() {
         super.onPause()
         finish()

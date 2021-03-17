@@ -15,9 +15,11 @@ class DetailActivity : AppCompatActivity() {
     companion object {
         const val EXTRA_MYDATA = "extra_mydata"
     }
+
     private inline fun <reified T : Parcelable> Activity.getParcelableExtra(key: String) = lazy {
         intent.getParcelableExtra<T>(key)
     }
+
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

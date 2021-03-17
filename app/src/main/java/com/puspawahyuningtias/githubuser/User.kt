@@ -3,7 +3,7 @@ package com.puspawahyuningtias.githubuser
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
 
-@Parcelize 
+@Parcelize
 data class User(
     var userName: String = "",
     var nama: String = "",
@@ -13,4 +13,4 @@ data class User(
     var repository: String = "",
     var location: String = "",
     var company: String = ""
-): Parcelable
+) : Parcelable

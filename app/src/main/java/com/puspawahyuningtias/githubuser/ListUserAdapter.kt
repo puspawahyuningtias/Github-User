@@ -10,11 +10,11 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import kotlinx.android.synthetic.main.item_user.view.*
 
-class ListUserAdapter (private val listUsers: ArrayList<User>, private val context: Context):
+class ListUserAdapter(private val listUsers: ArrayList<User>, private val context: Context) :
     RecyclerView.Adapter<ListUserAdapter.ListViewHolder>() {
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(user: User) {
-            with(itemView){
+            with(itemView) {
                 Glide.with(itemView.context)
                     .load(user.photo)
                     .apply(RequestOptions().override(55, 55))
