@@ -6,6 +6,8 @@
     <string name="following">Following</string>
     <string name="repository">Repository</string>
     <string name="Jumlah">0</string>
+    <string name="location">Location</string>
+    <string name="company">Company</string>
     <string-array name="username">
         <item>JakeWharton</item>
         <item>amitshekhariitbhu</item>

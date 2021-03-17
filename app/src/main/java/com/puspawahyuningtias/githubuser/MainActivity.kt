@@ -16,17 +16,27 @@ class MainActivity : AppCompatActivity() {
         list.addAll(getListUsers())
         showRecyclerList()
     }
-    @SuppressLint("ResourceType")
+    @SuppressLint("ResourceType", "Recycle")
     fun getListUsers(): ArrayList<User> {
         val dataUserName = resources.getStringArray(R.array.username)
         val dataNama = resources.getStringArray(R.array.name)
         val dataPhoto = resources.obtainTypedArray(R.array.avatar)
+        val dataFollowers = resources.getStringArray(R.array.followers)
+        val dataFollowing = resources.getStringArray(R.array.following)
+        val dataRepository = resources.getStringArray(R.array.repository)
+        val dataLocation = resources.getStringArray(R.array.location)
+        val dataCompany = resources.getStringArray(R.array.company)
         val listMyData = ArrayList<User>()
         for (position in dataUserName.indices) {
             val myData = User(
                 dataUserName[position],
                 dataNama[position],
-                dataPhoto.getResourceId(position, 0)
+                dataPhoto.getResourceId(position, 0),
+                dataFollowers[position],
+                dataFollowing[position],
+                dataRepository[position],
+                dataLocation[position],
+                dataCompany[position]
             )
             listMyData.add(myData)
         }

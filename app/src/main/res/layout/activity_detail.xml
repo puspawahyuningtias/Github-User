@@ -31,57 +31,71 @@
         app:layout_constraintTop_toBottomOf="@+id/img_avatar" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_nama"
-        android:gravity="center">
+        app:layout_constraintTop_toBottomOf="@+id/tv_nama">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="5dp">
+            android:orientation="vertical">
+
             <TextView
+                android:id="@+id/tv_followers"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="@string/Jumlah"
-                android:layout_gravity="center" />
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:text="@string/Jumlah" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="@string/followers" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="5dp">
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:orientation="vertical">
+
             <TextView
+                android:id="@+id/tv_following"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="@string/Jumlah"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:text="@string/Jumlah" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="@string/following" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_margin="5dp">
+            android:orientation="vertical">
+
             <TextView
+                android:id="@+id/tv_repository"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="@string/Jumlah"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:text="@string/Jumlah" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
@@ -90,6 +104,55 @@
     </LinearLayout>
 
 
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="UseCompoundDrawables">
 
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/ic_pin"
+            android:contentDescription="@string/location" />
+
+        <TextView
+            android:id="@+id/tv_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/location" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/ic_office_building"
+            android:layout_marginEnd="10dp"
+            android:contentDescription="@string/company" />
+
+        <TextView
+            android:id="@+id/tv_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/company" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
